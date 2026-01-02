@@ -2,6 +2,12 @@
 
 **Smart Stock** is an intelligent inventory management platform designed to help businesses track stock levels, automate reordering, and gain real-time insights into inventory health. Built with modern web technologies and Firebase, the system is optimized for scalability, accuracy, and ease of use.
 
+## 🌐 Live Demo
+
+**Demo app is available at:** [https://smartstock-seven.vercel.app](https://smartstock-seven.vercel.app)
+
+Try it out! Sign up for a free account and explore all the features.
+
 ---
 
 ## 🚀 Features
