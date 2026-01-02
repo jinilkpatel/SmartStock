@@ -32,7 +32,7 @@ This guide will help you deploy SmartStock to Vercel.
    vercel
    ```
    - Follow the prompts to link your project
-   - When asked about environment variables, add: `VITE_GEMINI_API_KEY` with your Gemini API key
+   - When asked about environment variables, add all required variables (see Environment Variables section below)
 
 5. **For production deployment**:
    ```bash
@@ -55,24 +55,42 @@ This guide will help you deploy SmartStock to Vercel.
 
 5. **Add Environment Variables**:
    - Go to Project Settings → Environment Variables
-   - Add: `VITE_GEMINI_API_KEY` with your Gemini API key value
-   - Make sure it's available for Production, Preview, and Development
+   - Add all required environment variables (see Environment Variables section below)
+   - Make sure they're available for Production, Preview, and Development
 
 6. **Deploy!**
 
 ## Environment Variables
 
-The following environment variable is required:
+The following environment variables are required:
 
-- `VITE_GEMINI_API_KEY`: Your Google Gemini API key for the AI chat support feature
+### Required Variables:
+
+1. **VITE_GEMINI_API_KEY**: Your Google Gemini API key for the AI chat support feature
+2. **VITE_FIREBASE_API_KEY**: Your Firebase API key
+3. **VITE_FIREBASE_AUTH_DOMAIN**: Your Firebase auth domain (e.g., `your-project.firebaseapp.com`)
+4. **VITE_FIREBASE_PROJECT_ID**: Your Firebase project ID
+5. **VITE_FIREBASE_STORAGE_BUCKET**: Your Firebase storage bucket
+6. **VITE_FIREBASE_MESSAGING_SENDER_ID**: Your Firebase messaging sender ID
+7. **VITE_FIREBASE_APP_ID**: Your Firebase app ID
+8. **VITE_FIREBASE_MEASUREMENT_ID**: Your Firebase measurement ID (optional, for Analytics)
 
 ### Setting Environment Variables in Vercel
 
 1. Go to your project on Vercel
 2. Navigate to **Settings** → **Environment Variables**
-3. Add `VITE_GEMINI_API_KEY` with your API key
+3. Add all the required environment variables listed above
 4. Select all environments (Production, Preview, Development)
 5. Redeploy your application
+
+### Local Development Setup
+
+1. Copy `env.example` to `.env`:
+   ```bash
+   cp env.example .env
+   ```
+2. Fill in your actual API keys and Firebase configuration in the `.env` file
+3. The `.env` file is already in `.gitignore` and will not be committed to Git
 
 ## Post-Deployment
 
